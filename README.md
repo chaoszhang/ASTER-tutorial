@@ -32,12 +32,20 @@ bin/astral-pro -t NUM_THREADS 1kp-12na-gentrees.tre
 bin/asterisk-biallelic-cuda -t NUM_THREADS -y example/example.phylip
 ```
 ## S200
-Download and unzip [1KP](https://github.com/chaoszhang/ASTER-tutorial/raw/main/1kp-12na-gentrees.tre.gz) gene trees.
+Download and unzip [S200](https://github.com/chaoszhang/ASTER-tutorial/raw/main/all-genes.phylip.gz) alignments.
 You can start with one round of exploration. (Replace NUM_THREADS with your desired number of threads)
 ```
-bin/asterisk-biallelic-cuda -r 1 -s 0 -t NUM_THREADS -y example/example.phylip
+bin/asterisk-biallelic-cuda -r 1 -s 0 -t NUM_THREADS -y all-genes.phylip
 ```
 The you can run
 ```
-bin/asterisk-biallelic-cuda -t NUM_THREADS -y example/example.phylip
+bin/asterisk-biallelic-cuda -t NUM_THREADS -y all-genes.phylip
+```
+You can compare running time with CPU implementation:
+```
+bin/asterisk-biallelic -r 1 -s 0 -t NUM_THREADS -y all-genes.phylip
+```
+and
+```
+bin/asterisk-biallelic -t NUM_THREADS -y all-genes.phylip
 ```
