@@ -41,7 +41,7 @@ The you can run
 ```
 bin/asterisk-biallelic-cuda -t NUM_THREADS -y all-genes.phylip
 ```
-You can compare running time with CPU implementation:
+You can compare its running time with the CPU implementation:
 ```
 bin/asterisk-biallelic -r 1 -s 0 -t NUM_THREADS -y all-genes.phylip
 ```
